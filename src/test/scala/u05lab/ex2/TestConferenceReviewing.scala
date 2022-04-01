@@ -18,7 +18,7 @@ class TestConferenceReviewing {
 
   @Test
   def testLoad(): Unit =
-    assertEquals(new Pair(10, Map((Question.RELEVANCE, 9), (Question.SIGNIFICANCE, 2),
+    assertEquals((10, Map((Question.RELEVANCE, 9), (Question.SIGNIFICANCE, 2),
       (Question.CONFIDENCE, 3), (Question.FINAL, 6))), conferenceReviewing.getList.head)
 
   @Test
@@ -35,7 +35,7 @@ class TestConferenceReviewing {
 
   @Test
   def testSortedAcceptedArticles(): Unit =
-    assertEquals(List(new Pair(10, 7.0)), conferenceReviewing.sortedAcceptedArticles())
+    assertEquals(List((10, 7.0)), conferenceReviewing.sortedAcceptedArticles())
 
   @Test
   def testAverageWeightedFinalScoreMap(): Unit =
